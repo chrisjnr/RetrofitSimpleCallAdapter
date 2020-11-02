@@ -24,3 +24,14 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+
+ext{
+
+    minSdkVersion = 21
+    glideVersion = '3.8.0'
+    gsonVersion = '2.8.2'
+    okHttpVersion = '2.7.5'
+    okHttp3Version = '3.9.0'
+    retrofit2Version = '2.6.0'
+}

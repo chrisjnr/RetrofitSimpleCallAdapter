@@ -42,4 +42,15 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+
+
+    api "com.google.code.gson:gson:$rootProject.gsonVersion"
+    api "com.squareup.okhttp:okhttp:$rootProject.okHttpVersion"
+
+    // Retrofit deps
+    api "com.squareup.okhttp3:okhttp:$rootProject.okHttp3Version"
+    api "com.squareup.okhttp3:logging-interceptor:$rootProject.okHttp3Version"
+    api "com.squareup.retrofit2:retrofit:$rootProject.retrofit2Version"
+    api "com.squareup.retrofit2:converter-gson:$rootProject.retrofit2Version"
 }
