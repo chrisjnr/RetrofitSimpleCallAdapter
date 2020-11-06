@@ -1,13 +1,13 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
-    ext.kotlin_version = "1.4.10"
+    val kotlin_version by extra("1.4.10")
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.0"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath (Libs.Android.gradleBuildTools)
+        classpath (Libs.Kotlin.gradlePlugin)
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -21,17 +21,6 @@ allprojects {
     }
 }
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-
-
-ext{
-
-    minSdkVersion = 21
-    glideVersion = '3.8.0'
-    gsonVersion = '2.8.2'
-    okHttpVersion = '2.7.5'
-    okHttp3Version = '3.9.0'
-    retrofit2Version = '2.6.0'
-}
+//task clean(type: Delete) {
+//    delete rootProject.buildDir
+//}
